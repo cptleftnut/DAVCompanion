@@ -1,0 +1,8 @@
+# DAVCompanion/.gitignore
+node_modules/
+.env
+.expo/
+npm-debug.log
+yarn-error.log
+frontend/android/
+frontend/ios/
