@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform, Animated } from 'react-native';
+import * as Speech from 'expo-speech';
 
 // Sæt denne til din computers IP (f.eks. 'http://192.168.1.X:3000') hvis du tester på fysisk telefon!
 const BACKEND_URL = 'http://10.0.2.2:3000'; // 10.0.2.2 virker for Android emulator
@@ -40,6 +41,11 @@ export default function App() {
       setMessages(prev => [...prev, { role: 'dav', content: data.reply }]);
       setFace('( ^ ▽ ^ )');
       bounce();
+      
+      // Afspil tale
+      if (data.speechText) {
+        Speech.speak(data.speechText, { language: 'da-DK', pitch: 1.1, rate: 1.0 });
+      }
 
     } catch (error) {
       console.error(error);

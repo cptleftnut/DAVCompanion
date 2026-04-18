@@ -80,7 +80,7 @@ app.post('/chat', async (req, res) => {
         const result = await model.generateContent(message);
         const aiText = result.response.text();
 
-        res.json({ reply: aiText });
+        res.json({ reply: aiText, speechText: aiText.replace(/[*_#]/g, '') });
 
         extractAndStoreMemory(message, aiText);
 
