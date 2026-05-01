@@ -1,8 +1,31 @@
-# DAVCompanion/.gitignore
-node_modules/
-.env
-.expo/
-npm-debug.log
-yarn-error.log
-frontend/android/
-frontend/ios/
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Local configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
+captures/
+
+# Keystore files
+*.jks
+*.keystore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+output.json

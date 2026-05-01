@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Car AI Robot</string>
+    <string name="robot_name">Mochi</string>
+    <string name="tagline">Your AI Companion for Car, Home & Kids</string>
+    <string name="voice_interaction">Voice Interaction</string>
+    <string name="emotions">Dynamic Emotions</string>
+    <string name="charging">Magnetic Charging</string>
+    <string name="pet_mode">Pet Mode</string>
+    <string name="tap_to_wake">Tap to wake me up!</string>
+    <string name="listening">Listening…</string>
+    <string name="charging_status">Charging… %1$d%%</string>
+    <string name="battery_full">Fully Charged!</string>
+</resources>
