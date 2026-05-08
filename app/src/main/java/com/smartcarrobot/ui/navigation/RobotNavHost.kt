@@ -9,6 +9,7 @@ import com.smartcarrobot.ui.screens.ChargingScreen
 import com.smartcarrobot.ui.screens.EmotionsScreen
 import com.smartcarrobot.ui.screens.VoiceScreen
 import com.smartcarrobot.ui.screens.PetModeScreen
+import com.smartcarrobot.ui.screens.ReachyResourcesScreen
 
 sealed class Screen(val route: String) {
     data object Home : Screen("home")
@@ -16,6 +17,7 @@ sealed class Screen(val route: String) {
     data object Emotions : Screen("emotions")
     data object Voice : Screen("voice")
     data object PetMode : Screen("pet_mode")
+    data object ReachyResources : Screen("reachy_resources")
 }
 
 @Composable
@@ -36,6 +38,9 @@ fun RobotNavHost() {
         }
         composable(Screen.PetMode.route) {
             PetModeScreen(navController = navController)
+        }
+        composable(Screen.ReachyResources.route) {
+            ReachyResourcesScreen(navController = navController)
         }
     }
 }

@@ -257,7 +257,13 @@ private fun FeatureGrid(
             Icons.Filled.Pets,
             Color(0xFFFF4081),
             Screen.PetMode.route
-        ) { viewModel.petRobot() }
+        ) { viewModel.petRobot() },
+        FeatureItem(
+            "Reachy",
+            Icons.Filled.Extension,
+            Color(0xFFEEFF41),
+            Screen.ReachyResources.route
+        ) { }
     )
 
     Row(
