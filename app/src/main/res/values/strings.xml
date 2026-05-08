@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Smart Car AI Robot</string>
     <string name="robot_name">Mochi</string>
-    <string name="tagline">Your AI Companion for Car, Home & Kids</string>
+    <string name="tagline">Your AI Companion for Car, Home &amp; Kids</string>
     <string name="voice_interaction">Voice Interaction</string>
     <string name="emotions">Dynamic Emotions</string>
     <string name="charging">Magnetic Charging</string>
