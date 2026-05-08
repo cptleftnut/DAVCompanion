@@ -78,7 +78,7 @@ class RobotViewModel : ViewModel() {
             _state.value = _state.value.copy(
                 isListening = false,
                 emotion = RobotEmotion.HAPPY,
-                lastVoiceCommand = ""Hey Mochi, play my driving playlist!""
+                lastVoiceCommand = "Hey Mochi, play my driving playlist!"
             )
             delay(3000)
             _state.value = _state.value.copy(lastVoiceCommand = "")

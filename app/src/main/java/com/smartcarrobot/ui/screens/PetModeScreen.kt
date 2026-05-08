@@ -16,6 +16,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
@@ -39,7 +40,7 @@ fun PetModeScreen(
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     var showHeart by remember { mutableStateOf(false) }
-    var heartPosition by remember { mutableStateOf(Offset.Zero) }
+    var heartPosition by remember { mutableStateOf<Offset>(Offset.Zero) }
 
     val infiniteTransition = rememberInfiniteTransition(label = "pet")
 
@@ -160,7 +161,7 @@ fun PetModeScreen(
                 }
 
                 // Heart burst on pet
-                AnimatedVisibility(
+                this@Column.AnimatedVisibility(
                     visible = showHeart,
                     enter = scaleIn(initialScale = 0.3f) + fadeIn(),
                     exit = scaleOut(targetScale = 2f) + fadeOut()
